@@ -6,75 +6,74 @@
  - Spring Cloud Config 统一配置中心
  - Monitor微服务监控
  
-<br>   
+<br/>    
 注意：本demo需要一定的spring cloud基础
 
-<br>  
+<br/>  
 项目构建工具：gradle-4.6
 配置目录 -> D:/gradle
 
-<br>  
+<br/>   
 构建项目
 双击 eclipse.bat
 
-<br>  
+<br/>  
 打包项目
 双击 build.bat
 
-<br>  
-一：首先hosts文件需要添加以下域名
-127.0.0.1       register
-127.0.0.1       register1
-127.0.0.1       register2
+<br/>  
+一：首先hosts文件需要添加以下域名<br/>  
+127.0.0.1       register <br/>  
+127.0.0.1       register1 <br/>  
+127.0.0.1       register2  <br/>  
 
-<br>  
-二：启动注册服务中心
+<br/>  
+二：启动注册服务中心<br/>  
 register -> node-1.bat +node-2.bat
 
-<br>  
+<br/>  
 服务url：
 http://register2:9011   or   http://register1:9011
 
-<br>  
+<br/>   
 三：启动网关服务器
 gateway  -> node-1.bat
 
-<br>  
+<br/>  
 四：启动权限认证
 auth-center -> node-1.bat
 
-<br>  
+<br/>    
 五.启动resource服务
 resource  ->  ResourceApplication
 
-<br>  
+<br/>  
 六.启动分布式链路跟踪服务(zipkin,只在getway收集信息即可)
 monitor  ->   MonitorApplication
 
-访问地址：
+访问地址：<br/>  
 http://localhost:9050
 
 
-
-<br>  <br>  
+<br/>  <br/>   
 1.获取token
 client模式(账号信息来自 表: oauth_client_details ->  client_id  + client_secret)：
 http://localhost:9030/uaa/oauth/token?grant_type=client_credentials&scope=select&client_id=client_1&client_secret=123456
 获得
 {"access_token":"aa76f57b-77a5-4a5f-89e2-137f026d2712","token_type":"bearer","expires_in":43148,"scope":"select"}
 
-<br>  <br>  
+<br/>  <br/>   
 password模式： (账号信息来自数据库表: oauth_client_details + rc_user, 内部使用了BCryptPasswordEncoder加密，原始密码是123456)：
 http://localhost:9030/uaa/oauth/token?username=admin&password=123456&grant_type=password&scope=select&client_id=client_2&client_secret=123456
  响应如下： 
 {"access_token":"2b81db72-f5c9-4676-b97a-7aec45f02b34","token_type":"bearer","refresh_token":"57e6d057-7b0c-46c6-ab79-b6521e369e25","expires_in":43169,"scope":"select"}
 
-<br>  <br>  
+<br/>  <br/>  
 2.获得用户信息
 http://localhost:9030/resource/getUser?access_token=2b81db72-f5c9-4676-b97a-7aec45f02b34
 注意：授权权限认证来自Micro-Service-Skeleton-Auth的UserController
 
-<br>  <br>  
+<br/>  <br/>  
 3.注销
 自定义：
 http://localhost:9030/authCenter/cancel?access_token=2b81db72-f5c9-4676-b97a-7aec45f02b34
@@ -83,12 +82,12 @@ http://localhost:9030/authCenter/cancel?access_token=2b81db72-f5c9-4676-b97a-7ae
 官方：
 http://localhost:9030/uaa/oauth/remove?access_token=2b81db72-f5c9-4676-b97a-7aec45f02b34
 
-<br>  
+<br/>  
 注意：这里需要添加白名单
 security:
   ignored: /cancel/**,/oauth/remove
 
-<br>  <br>  
+<br/>  <br/>  
 4.其它
 index页面（没有过滤，所以需要权限）
             ->  http://localhost:9060/?access_token=2b81db72-f5c9-4676-b97a-7aec45f02b34
@@ -108,7 +107,7 @@ login页面（没有过滤，所以需要权限）
 
 
 
-<br>  <br>  
+<br/>  <br/>  
 授权{
 注意：账号信息来自数据库表: oauth_client_details + rc_user, 内部使用了BCryptPasswordEncoder加密，原始密码是123456
 注意：需要保证client_id 拥有 authorization_code+client_credentials，如果没有请在oauth_client_details表里加
@@ -117,10 +116,10 @@ login页面（没有过滤，所以需要权限）
 1.授权地址：
 http://localhost:9030/uaa/oauth/authorize?client_id=client_2&response_type=code&redirect_uri=http://www.baidu.com&state=123
 
-<br>  
+<br/>  <br/>  
 2.控制台输入 UserDetailsService 里边的账号密码(rc_user,egg: test1 123456),选择Approval，点击确认
 
-<br>  
+<br/>  <br/>   
 得到code
 https://www.baidu.com/?code=m8mWSj&state=123
 

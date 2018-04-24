@@ -306,9 +306,9 @@ https://stackoverflow.com/questions/35088918/spring-oauth2-hasrole-access-denied
 ![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/admin.png)<br/>
 
 <br/><br/>
-win7 配置curl 
+win7 配置curl <br/>
 下载地址:https://winampplugins.co.uk/curl/
-配置环境变量
+配置环境变量<br/>
 当然，可以给Windows增加curl命令的环境变量，增加CURL_HOME环境变量，给PATH环境变量加上%CURL_HOME%; 
 
 

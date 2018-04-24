@@ -23,7 +23,7 @@
 
 <br/> <br/>   
 一：首先hosts文件需要添加以下域名 
-127.0.0.1       register<br/>  
+<br/>127.0.0.1       register<br/>  
 127.0.0.1       register1<br/>
 127.0.0.1       register2
 
@@ -140,19 +140,19 @@ login页面（没有过滤，所以需要权限）<br/>
 <br/>对应的是数据库表： oauth_client_details + rc_user	
 }
 
-<br>  <br>  
+<br/><br/> 
 不同角色权限控制{
 <br/>数据库中的字段是authorities,表是oauth_client_details
-<br>  
-clients.inMemory()
-                .withClient("default")
-                .secret("kx")
-                .scopes("AUTH", "TRUST")
-                .autoApprove(true)
-                .authorities("ROLE_GUEST", "ROLE_USER", "ROLE_ADMIN")
-                .authorizedGrantTypes("authorization_code", "implicit", "refresh_token");
-<br>  		
-    /**
+  
+clients.inMemory()<br/>
+                .withClient("default")<br/>
+                .secret("kx")<br>
+                .scopes("AUTH", "TRUST")<br/>
+                .autoApprove(true)<br/>
+                .authorities("ROLE_GUEST", "ROLE_USER", "ROLE_ADMIN")<br/>
+                .authorizedGrantTypes("authorization_code", "implicit", "refresh_token");<br/>
+<br/> 		
+        /**
 	 * 不需要权限，有token即可
 	 * @param user 正常登陆获得token即可
 	 * @return 权限
@@ -161,7 +161,7 @@ clients.inMemory()
     public Principal user(Principal user) {
         return user;
     }
-<br>  
+
 	
 	/**
 	 * 需要用户权限
@@ -175,7 +175,7 @@ clients.inMemory()
        map.put("name", principal.getName());
        return map;
     }
-<br>  
+<br/>  
 	/**
 	 * 需要管理员权限
 	 * @param principal 管理员用户
@@ -188,7 +188,7 @@ clients.inMemory()
     	return principal;
     }
 
-<br>  
+<br/> 
 测试：
 <br/>有正确权限的<br/>  
 http://localhost:9030/uaa/oauth/token?username=admin&password=123456&grant_type=password&scope=select&client_id=client_3&client_secret=123456	
@@ -253,10 +253,10 @@ security:<br/>
     resource:<br/>
       id: resource<br/>
       #默认配置，有token就可以的<br/>
-#       user-info-uri: http://localhost:9030/uaa/user
-      #额外配置，需要管理员角色权限
-      user-info-uri: http://localhost:9030/uaa/admin
-      prefer-token-info: false
+#       user-info-uri: http://localhost:9030/uaa/user<br/>
+      #额外配置，需要管理员角色权限<br/>
+      user-info-uri: http://localhost:9030/uaa/admin<br/>
+      prefer-token-info: false<br/>
 
 	  
 @RestController

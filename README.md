@@ -7,6 +7,7 @@
  - Monitor微服务监控
  
 注意：本demo需要一定的spring cloud基础
+
  
 
 项目构建工具：gradle-4.6
@@ -24,11 +25,14 @@
 127.0.0.1       register1
 127.0.0.1       register2
 
+
 二：启动注册服务中心
 register -> node-1.bat +node-2.bat
 
+
 服务url：
 http://register2:9011   or   http://register1:9011
+
 
 三：启动网关服务器
 gateway  -> node-1.bat
@@ -53,6 +57,7 @@ http://localhost:9030/uaa/oauth/token?grant_type=client_credentials&scope=select
 {"access_token":"aa76f57b-77a5-4a5f-89e2-137f026d2712","token_type":"bearer","expires_in":43148,"scope":"select"}
 
 
+
 password模式： (账号信息来自数据库表: oauth_client_details + rc_user, 内部使用了BCryptPasswordEncoder加密，原始密码是123456)：
 http://localhost:9030/uaa/oauth/token?username=admin&password=123456&grant_type=password&scope=select&client_id=client_2&client_secret=123456
  响应如下： 
@@ -71,6 +76,7 @@ http://localhost:9030/authCenter/cancel?access_token=2b81db72-f5c9-4676-b97a-7ae
 
 官方：
 http://localhost:9030/uaa/oauth/remove?access_token=2b81db72-f5c9-4676-b97a-7aec45f02b34
+
 
 注意：这里需要添加白名单
 security:
@@ -109,6 +115,7 @@ http://localhost:9030/uaa/oauth/authorize?client_id=client_2&response_type=code&
 得到code
 https://www.baidu.com/?code=m8mWSj&state=123
 
+
 3.
 curl -X POST -H "Cant-Type: application/x-www-form-urlencoded" -d "grant_type=authorization_code&code=m8mWSj&redirect_uri=http://www.baidu.com" "http://client_2:123456@localhost:9030/uaa/oauth/token"
 返回如下：
@@ -121,6 +128,7 @@ curl -X POST -H "Cant-Type: application/x-www-form-urlencoded" -d "grant_type=au
 		"scope": "
 		select"
 }
+
 
 注意：http://账号:密码@ip:端口/oauth/token  client_id + client_secret
 对应的是数据库表： oauth_client_details + rc_user	
@@ -179,12 +187,14 @@ clients.inMemory()
 
 测试：
 
+
 有正确权限的
 http://localhost:9030/uaa/oauth/token?username=admin&password=123456&grant_type=password&scope=select&client_id=client_3&client_secret=123456	
 数据库authorized_grant_types 是           ->   password,refresh_token,client_credentials
 数据库 表: rc_role value 是               ->   ROLE_admin （代码中加了前缀 ROLE_ ，后缀可以在数据库表 rc_role 中设置）
 返回：
 {"access_token":"b8e8902e-6205-409d-9cc5-bca28e7e34ea","token_type":"bearer","refresh_token":"1fc2c78b-0600-4918-914e-49643cddf59e","expires_in":43173,"scope":"select"}
+
 
 具体测试：
 http://localhost:9060/admin?access_token=b8e8902e-6205-409d-9cc5-bca28e7e34ea
@@ -203,6 +213,7 @@ http://localhost:9060/admin?access_token=b8e8902e-6205-409d-9cc5-bca28e7e34ea
 "username":"admin","authorities":[{"authority":"ROLE_admin"},{"authority":"apidoc"},{"authority":"database/log"},{"authority":"system"},{"authority":"user/add"},
 {"authority":"user/delete"},{"authority":"user/edit"},{"authority":"user/view"},{"authority":"userList"}],"accountNonExpired":true,"accountNonLocked":true,
 "credentialsNonExpired":true,"enabled":true},"name":"admin"}
+
 
 
 

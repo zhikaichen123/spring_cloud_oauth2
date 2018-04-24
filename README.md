@@ -304,6 +304,7 @@ https://stackoverflow.com/questions/35088918/spring-oauth2-hasrole-access-denied
 ![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/7.png)<br/>
 ![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/8.png)<br/>
 ![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/admin.png)<br/>
+![image](https://github.com/ButBueatiful/dotvim/raw/master/screenshots/vim-screenshot.jpg)
 
 <br/><br/>
 win7 配置curl <br/>

@@ -22,10 +22,10 @@
 双击 build.bat
 
 <br/> <br/>   
-一：首先hosts文件需要添加以下域名<br/>  
-127.0.0.1       register  
-127.0.0.1       register1 
-<br/>127.0.0.1       register2
+一：首先hosts文件需要添加以下域名 
+127.0.0.1       register<br/>  
+127.0.0.1       register1<br/>
+127.0.0.1       register2
 
 <br/> <br/>  
 二：启动注册服务中心<br/>  
@@ -58,20 +58,20 @@ http://localhost:9050
 <br/>  <br/>   
 1.获取token<br/>  
 client模式(账号信息来自 表: oauth_client_details ->  client_id  + client_secret)：
-http://localhost:9030/uaa/oauth/token?grant_type=client_credentials&scope=select&client_id=client_1&client_secret=123456
-获得
+<br/>http://localhost:9030/uaa/oauth/token?grant_type=client_credentials&scope=select&client_id=client_1&client_secret=123456
+<br/>获得<br/>
 {"access_token":"aa76f57b-77a5-4a5f-89e2-137f026d2712","token_type":"bearer","expires_in":43148,"scope":"select"}
 
 <br/> <br/>   
 password模式： (账号信息来自数据库表: oauth_client_details + rc_user, 内部使用了BCryptPasswordEncoder加密，原始密码是123456)：<br/>  
-http://localhost:9030/uaa/oauth/token?username=admin&password=123456&grant_type=password&scope=select&client_id=client_2&client_secret=123456
+http://localhost:9030/uaa/oauth/tokenusername=admin&password=123456&grant_type=password&scope=select&client_id=client_2&client_secret=123456
  <br/>  响应如下： 
-{"access_token":"2b81db72-f5c9-4676-b97a-7aec45f02b34","token_type":"bearer","refresh_token":"57e6d057-7b0c-46c6-ab79-b6521e369e25","expires_in":43169,"scope":"select"}
+<br/>{"access_token":"2b81db72-f5c9-4676-b97a-7aec45f02b34","token_type":"bearer","refresh_token":"57e6d057-7b0c-46c6-ab79-b6521e369e25","expires_in":43169,"scope":"select"}
 
 <br/>  <br/>  
 2.获得用户信息<br/>  
 http://localhost:9030/resource/getUser?access_token=2b81db72-f5c9-4676-b97a-7aec45f02b34
-注意：授权权限认证来自Micro-Service-Skeleton-Auth的UserController
+<br/>注意：授权权限认证来自Micro-Service-Skeleton-Auth的UserController
 
 <br/>  <br/>  
 3.注销
@@ -194,7 +194,7 @@ clients.inMemory()
 http://localhost:9030/uaa/oauth/token?username=admin&password=123456&grant_type=password&scope=select&client_id=client_3&client_secret=123456	
 <br/>数据库authorized_grant_types 是           ->   password,refresh_token,client_credentials
 <br/>数据库 表: rc_role value 是               ->   ROLE_admin （代码中加了前缀 ROLE_ ，后缀可以在数据库表 rc_role 中设置）
-<br/>  返回：
+<br/>  返回：<br/>
 {"access_token":"b8e8902e-6205-409d-9cc5-bca28e7e34ea","token_type":"bearer","refresh_token":"1fc2c78b-0600-4918-914e-49643cddf59e","expires_in":43173,"scope":"select"}
 
 <br/>  具体测试：<br/>  
@@ -293,16 +293,16 @@ https://stackoverflow.com/questions/35088918/spring-oauth2-hasrole-access-denied
 
 <br/>
 流程图:<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/0.png?raw=false)<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/1.png?raw=true)<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/2.png?raw=true)<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/3.png?raw=true)<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/4.png?raw=true)<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/5.png?raw=true)<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/6.png?raw=true)<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/7.png?raw=true)<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/8.png?raw=true)<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/admin.png?raw=true)<br/>
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/0.png)<br/>
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/1.png)<br/>
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/2.png)<br/>
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/3.png)<br/>
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/4.png)<br/>
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/5.png)<br/>
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/6.png)<br/>
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/7.png)<br/>
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/8.png)<br/>
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/admin.png)<br/>
 
 <br/><br/>
 win7 配置curl <br/>

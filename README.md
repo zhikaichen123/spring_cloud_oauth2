@@ -23,9 +23,9 @@
 
 <br/> <br/>   
 一：首先hosts文件需要添加以下域名 
-<br/>127.0.0.1       register<br/>  
-127.0.0.1       register1<br/>
-127.0.0.1       register2
+<br/>127.0.0.1       register
+<br/>127.0.0.1       register1
+<br/>127.0.0.1       register2
 
 <br/> <br/>  
 二：启动注册服务中心<br/>  
@@ -151,31 +151,31 @@ clients.inMemory()<br/>
                 .autoApprove(true)<br/>
                 .authorities("ROLE_GUEST", "ROLE_USER", "ROLE_ADMIN")<br/>
                 .authorizedGrantTypes("authorization_code", "implicit", "refresh_token");<br/>
-<br/> 		
-        /**
-	 * 不需要权限，有token即可
-	 * @param user 正常登陆获得token即可
-	 * @return 权限
+
+	
+	/**
+	 * 完全自主控制权限
+	 * @param user 合法用户
+	 * @return 验证结果
 	 */
 	@RequestMapping("/user")
-    public Principal user(Principal user) {
-        return user;
+    public Principal user(Principal user,HttpServletRequest request) {
+		return user;
     }
-
 	
 	/**
 	 * 需要用户权限
 	 * @param principal 普通用户
 	 * @return 权限
 	 */
-	@PreAuthorize("hasRole('admin') or hasRole('user')")
+	@PreAuthorize("hasRole('ROLE_admin') or hasRole('ROLE_user')")
     @RequestMapping("/user2")
     public Map<String,String> user2(Principal principal) {
        Map<String,String> map = new LinkedHashMap<>();
        map.put("name", principal.getName());
        return map;
     }
-<br/>  
+	
 	/**
 	 * 需要管理员权限
 	 * @param principal 管理员用户
@@ -187,6 +187,7 @@ clients.inMemory()<br/>
     public Principal helloSecret(Principal principal) {
     	return principal;
     }
+
 
 <br/> 
 测试：

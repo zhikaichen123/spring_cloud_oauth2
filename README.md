@@ -89,18 +89,18 @@ security:
 
 <br/>  <br/>  
 4.其它
-index页面（没有过滤，所以需要权限）
-            ->  http://localhost:9060/?access_token=2b81db72-f5c9-4676-b97a-7aec45f02b34
+index页面（没有过滤，所以需要权限）<br/>
+            ->  http://localhost:9060/?access_token=2b81db72-f5c9-4676-b97a-7aec45f02b34<br/>
             ->  http://localhost:9030/authCenter?access_token=2b81db72-f5c9-4676-b97a-7aec45f02b34
 
 
-hello页面（已经过滤，所以不需要权限）         
+hello页面（已经过滤，所以不需要权限）<br/>         
             ->  http://localhost:9060/hello
             ->  http://localhost:9030/authCenter/hello
 
 
-login页面（没有过滤，所以需要权限）  
-            ->  http://localhost:9060/login?access_token=2b81db72-f5c9-4676-b97a-7aec45f02b34
+login页面（没有过滤，所以需要权限）<br/>  
+            ->  http://localhost:9060/login?access_token=2b81db72-f5c9-4676-b97a-7aec45f02b34<br/>
             ->  http://localhost:9030/authCenter/login?access_token=2b81db72-f5c9-4676-b97a-7aec45f02b34
             
 注意：authCenter是服务名
@@ -223,11 +223,11 @@ http://localhost:9060/admin?access_token=ddc25040-33f1-4bbc-8a69-a37609c21433
 
 
 注意：<br/>  
-需要有登陆用户即可<br/>          http://localhost:9060/user?access_token=4dc653dc-747f-490a-a84f-11cfd77ae165
+需要有登陆用户即可<br/>          http://localhost:9060/user?access_token=4dc653dc-747f-490a-a84f-11cfd77ae165<br/>
                           http://localhost:9030/uaa/user?access_token=4dc653dc-747f-490a-a84f-11cfd77ae165
-<br/>需要有user用户权限以上<br/>      http://localhost:9060/user2?access_token=ddc25040-33f1-4bbc-8a69-a37609c21433
+<br/>需要有user用户权限以上<br/>      http://localhost:9060/user2?access_token=ddc25040-33f1-4bbc-8a69-a37609c21433<br/>
                           http://localhost:9030/uaa/user2?access_token=ddc25040-33f1-4bbc-8a69-a37609c21433
-<br/>需要有admin用户权限<br/>        http://localhost:9060/admin?access_token=4dc653dc-747f-490a-a84f-11cfd77ae165
+<br/>需要有admin用户权限<br/>        http://localhost:9060/admin?access_token=4dc653dc-747f-490a-a84f-11cfd77ae165<br/>
                           http://localhost:9030/uaa/admin?access_token=4dc653dc-747f-490a-a84f-11cfd77ae165
 
 

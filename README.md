@@ -21,34 +21,34 @@
 打包项目
 双击 build.bat
 
-<br/>  
+<br/> <br/>   
 一：首先hosts文件需要添加以下域名<br/>  
 127.0.0.1       register <br/>  
 127.0.0.1       register1 <br/>  
 127.0.0.1       register2  <br/>  
 
-<br/>  
+<br/>  <br/>  
 二：启动注册服务中心<br/>  
 register -> node-1.bat +node-2.bat
 
-<br/>  
+<br/>  <br/>  
 服务url：
 http://register2:9011   or   http://register1:9011
 
-<br/>   
-三：启动网关服务器
+<br/>   <br/>  
+三：启动网关服务器<br/>  
 gateway  -> node-1.bat
 
-<br/>  
-四：启动权限认证
+<br/>  <br/>  
+四：启动权限认证<br/>  
 auth-center -> node-1.bat
 
-<br/>    
-五.启动resource服务
+<br/>  <br/>  
+五.启动resource服务<br/>  
 resource  ->  ResourceApplication
 
-<br/>  
-六.启动分布式链路跟踪服务(zipkin,只在getway收集信息即可)
+<br/>  <br/>  
+六.启动分布式链路跟踪服务(zipkin,只在getway收集信息即可)<br/>  
 monitor  ->   MonitorApplication
 
 访问地址：<br/>  

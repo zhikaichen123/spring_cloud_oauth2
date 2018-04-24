@@ -125,7 +125,7 @@ login页面（没有过滤，所以需要权限）<br/>
 
 <br>  
 3.curl -X POST -H "Cant-Type: application/x-www-form-urlencoded" -d "grant_type=authorization_code&code=m8mWSj&redirect_uri=http://www.baidu.com" "http://client_2:123456@localhost:9030/uaa/oauth/token"
-<br/>返回如下：
+<br/>返回如下：<br/> 
 {
 		"access_token": "857598ee-f82a-498c-959e-6315bbf27cd9",
 		"token_type": "bearer",
@@ -254,10 +254,7 @@ security:<br/>
     resource:<br/>
       id: resource<br/>
       #默认配置，有token就可以的<br/>
-#       user-info-uri: http://localhost:9030/uaa/user<br/>
-      #额外配置，需要管理员角色权限<br/>
-      user-info-uri: http://localhost:9030/uaa/admin<br/>
-      prefer-token-info: false<br/>
+      user-info-uri: http://localhost:9030/uaa/user<br/
 
 	  
 @RestController
@@ -290,7 +287,7 @@ https://blog.csdn.net/sinat_28454173/article/details/52312828
 
 总参考：<br/>
 https://stackoverflow.com/questions/35088918/spring-oauth2-hasrole-access-denied
-}
+<br/> }
 
 <br/>
 流程图:<br/>

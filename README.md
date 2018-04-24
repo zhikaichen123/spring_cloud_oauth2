@@ -223,11 +223,11 @@ http://localhost:9060/admin?access_token=ddc25040-33f1-4bbc-8a69-a37609c21433
 
 
 注意：<br/>  
-需要有登陆用户即可          http://localhost:9060/user?access_token=4dc653dc-747f-490a-a84f-11cfd77ae165
+需要有登陆用户即可<br/>          http://localhost:9060/user?access_token=4dc653dc-747f-490a-a84f-11cfd77ae165
                           http://localhost:9030/uaa/user?access_token=4dc653dc-747f-490a-a84f-11cfd77ae165
-需要有user用户权限以上      http://localhost:9060/user2?access_token=ddc25040-33f1-4bbc-8a69-a37609c21433
+<br/>需要有user用户权限以上<br/>      http://localhost:9060/user2?access_token=ddc25040-33f1-4bbc-8a69-a37609c21433
                           http://localhost:9030/uaa/user2?access_token=ddc25040-33f1-4bbc-8a69-a37609c21433
-需要有admin用户权限        http://localhost:9060/admin?access_token=4dc653dc-747f-490a-a84f-11cfd77ae165
+<br/>需要有admin用户权限<br/>        http://localhost:9060/admin?access_token=4dc653dc-747f-490a-a84f-11cfd77ae165
                           http://localhost:9030/uaa/admin?access_token=4dc653dc-747f-490a-a84f-11cfd77ae165
 
 
@@ -272,12 +272,12 @@ public class UserController {
 
 使用admin角色access_token<br/>
 http://localhost:9030/resource/getUser?access_token=b8e8902e-6205-409d-9cc5-bca28e7e34ea	
-返回：order
+<br/>返回：order
 
 
 使用user角色access_token<br/>
 http://localhost:9030/resource/getUser?access_token=ddc25040-33f1-4bbc-8a69-a37609c21433	
-返回:<br/>
+<br/>返回:<br/>
 <oauth>
 <error_description>420a5132-98ba-4bd8-8251-03a18be3af59</error_description>
 <error>invalid_token</error>

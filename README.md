@@ -25,7 +25,7 @@
 一：首先hosts文件需要添加以下域名<br/>  
 127.0.0.1       register  
 127.0.0.1       register1 
-127.0.0.1       register2
+<br/>127.0.0.1       register2
 
 <br/> <br/>  
 二：启动注册服务中心<br/>  
@@ -270,14 +270,14 @@ public class UserController {
 }	  
 
 
-使用admin角色access_token
+使用admin角色access_token<br/>
 http://localhost:9030/resource/getUser?access_token=b8e8902e-6205-409d-9cc5-bca28e7e34ea	
 返回：order
 
 
-使用user角色access_token
+使用user角色access_token<br/>
 http://localhost:9030/resource/getUser?access_token=ddc25040-33f1-4bbc-8a69-a37609c21433	
-返回:
+返回:<br/>
 <oauth>
 <error_description>420a5132-98ba-4bd8-8251-03a18be3af59</error_description>
 <error>invalid_token</error>
@@ -294,7 +294,7 @@ https://stackoverflow.com/questions/35088918/spring-oauth2-hasrole-access-denied
 
 
 
-win7 配置curl <br/>  
+win7 配置curl 
 下载地址:https://winampplugins.co.uk/curl/
 配置环境变量
 当然，可以给Windows增加curl命令的环境变量，增加CURL_HOME环境变量，给PATH环境变量加上%CURL_HOME%; 

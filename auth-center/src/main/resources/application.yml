@@ -14,11 +14,11 @@ spring:
     password: 
     druid:
       driver-class-name: com.mysql.jdbc.Driver
-  redis:
-    host: host
-    port: port
-    password: password
-    database: database
+#   redis:
+#     host: host
+#     port: 6379
+#     password: password
+#     database: xxx
 eureka:
   instance:
     prefer-ip-address: true

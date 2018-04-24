@@ -294,19 +294,19 @@ https://stackoverflow.com/questions/35088918/spring-oauth2-hasrole-access-denied
 
 <br/>
 流程图:<br/>
-![Alt text](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/0.png)<br/>
-![Alt text](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/1.png)<br/>
-![Alt text](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/2.png)<br/>
-![Alt text](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/3.png)<br/>
-![Alt text](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/4.png)<br/>
-![Alt text](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/5.png)<br/>
-![Alt text](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/6.png)<br/>
-![Alt text](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/7.png)<br/>
-![Alt text](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/8.png)<br/>
-![Alt text](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/9.png)<br/>
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/0.png)
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/1.png)
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/2.png)
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/3.png)
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/4.png)
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/5.png)
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/6.png)
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/7.png)
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/8.png)
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/9.png)
 
 
-
+<br/><br/>
 win7 配置curl 
 下载地址:https://winampplugins.co.uk/curl/
 配置环境变量

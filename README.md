@@ -293,7 +293,7 @@ https://stackoverflow.com/questions/35088918/spring-oauth2-hasrole-access-denied
 
 <br/>
 流程图:<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/0.png?raw=true)<br/>
+![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/0.png?raw=true)<br/>
 ![image](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/1.png?raw=true)<br/>
 ![image](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/2.png?raw=true)<br/>
 ![image](https://github.com/zhikaichen123/spring_cloud_oauth2/blob/master/demo/3.png?raw=true)<br/>

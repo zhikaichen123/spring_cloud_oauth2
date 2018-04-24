@@ -294,7 +294,7 @@ https://stackoverflow.com/questions/35088918/spring-oauth2-hasrole-access-denied
 
 <br/>
 流程图:<br/>
-![image](
+![这里写图片描述](
 https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/0.png
 )<br/>
 ![image](

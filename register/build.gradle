@@ -1,0 +1,14 @@
+description = 'register'
+dependencies {
+      compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka-server', version:'1.4.0.RELEASE'
+      testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'1.5.9.RELEASE') {
+           exclude(module: 'commons-logging')
+    }
+}
+
+jar {
+        manifest {
+            attributes("Main-Class": "com.microservice.skeleton.register.RegisterApplication")
+            attributes("Class-Path": configurations.compile.collect { 'lib/'+it.getName() }.join(' '))
+        }
+    }

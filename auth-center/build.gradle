@@ -1,0 +1,24 @@
+description = 'auth-center'
+dependencies {
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka', version:'1.4.0.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-oauth2', version:'1.2.1.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-security', version:'1.2.1.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'1.5.9.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version:'1.5.9.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version:'1.5.9.RELEASE'
+    compile group: 'mysql', name: 'mysql-connector-java', version:'5.1.44'
+    compile group: 'com.alibaba', name: 'druid-spring-boot-starter', version:'1.1.6'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version:'1.5.9.RELEASE'
+    compile group: 'org.projectlombok', name: 'lombok', version:'1.16.18'
+    testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'1.5.9.RELEASE') {
+    exclude(module: 'commons-logging')
+    }
+}
+
+jar {
+        manifest {
+            attributes("Main-Class": "com.microservice.skeleton.auth.AuthCenterApplication")
+            attributes("Class-Path": configurations.compile.collect { 'lib/'+it.getName() }.join(' '))
+        }
+    }
+

@@ -1,0 +1,12 @@
+rootProject.name = 'middle-ground-service-Parent'
+include ':middle-ground-service-Register'
+include ':middle-ground-service-Gateway'
+include ':middle-ground-service-Auth'
+include ':middle-ground-service-Resource'
+include ':middle-ground-service-Monitor'
+
+project(':middle-ground-service-Register').projectDir = "$rootDir/register" as File
+project(':middle-ground-service-Gateway').projectDir = "$rootDir/gateway" as File
+project(':middle-ground-service-Auth').projectDir = "$rootDir/auth-center" as File
+project(':middle-ground-service-Resource').projectDir = "$rootDir/resource" as File
+project(':middle-ground-service-Monitor').projectDir = "$rootDir/monitor" as File

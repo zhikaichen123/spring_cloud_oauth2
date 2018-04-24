@@ -1,0 +1,19 @@
+description = 'monitor'
+dependencies {
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka', version:'1.4.0.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix', version:'1.4.0.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix-dashboard', version:'1.4.0.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-turbine', version:'1.4.0.RELEASE'
+    compile group: 'io.zipkin.java', name: 'zipkin-server', version:'2.3.1'
+    runtime group: 'io.zipkin.java', name: 'zipkin-autoconfigure-ui', version:'2.3.1'
+    testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'1.5.9.RELEASE') {
+        exclude(module: 'commons-logging')
+    }
+}
+
+jar {
+        manifest {
+            attributes("Main-Class": "com.microservice.skeleton.monitor.MonitorApplication")
+            attributes("Class-Path": configurations.compile.collect { 'lib/'+it.getName() }.join(' '))
+        }
+    }

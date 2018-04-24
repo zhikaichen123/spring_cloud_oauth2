@@ -1,0 +1,50 @@
+server:
+  port: 9060
+
+spring:
+  application:
+    name: authCenter
+  zipkin:
+      base-url: http://localhost:9050
+  jpa:
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/zuul-auth?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: host
+    port: port
+    password: password
+    database: database
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+      service-url:
+        defaultZone: http://register1:9010/eureka/,http://register2:9011/eureka/
+###actuator认证配置 start####
+endpoints:
+  health:
+    sensitive: false
+    enabled: true
+##刷新时，关闭安全验证
+management:
+  security:
+    enabled: false
+###actuator认证 end####
+security:
+  #白名单配置
+  ignored: /css/**,/js/**,/images/**,/webjars/**,/**/favicon.ico,/static/**,/cancel/**,/hello,/oauth/remove
+  oauth2:
+    resource:
+      filter-order: 3
+logging:
+  config: classpath:logback.xml
+  level:
+    org:
+      springframework:
+        web: info

@@ -1,0 +1,1 @@
+java -jar .\build\libs\middle-ground-service-Auth-0.0.1-SNAPSHOT.jar

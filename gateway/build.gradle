@@ -1,0 +1,20 @@
+description = 'gateway'
+dependencies {
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-zuul', version:'1.4.0.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka', version:'1.4.0.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-security', version:'1.2.1.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-oauth2', version:'1.2.1.RELEASE'
+    compile group: 'org.springframework.retry', name: 'spring-retry', version:'1.2.1.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign', version:'1.4.0.RELEASE'
+    compile group: 'com.alibaba', name: 'fastjson', version:'1.2.8'
+    testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'1.5.9.RELEASE') {
+        exclude(module: 'commons-logging')
+    }
+}
+
+jar {
+        manifest {
+            attributes("Main-Class": "com.microservice.skeleton.gateway.GatewayApplication")
+            attributes("Class-Path": configurations.compile.collect { 'lib/'+it.getName() }.join(' '))
+        }
+    }

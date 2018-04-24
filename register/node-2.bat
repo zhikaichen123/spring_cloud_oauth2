@@ -1,0 +1,1 @@
+java -jar .\build\libs\middle-ground-service-Register-0.0.1-SNAPSHOT.jar --spring.profiles.active=node-2

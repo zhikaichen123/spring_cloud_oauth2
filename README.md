@@ -294,17 +294,36 @@ https://stackoverflow.com/questions/35088918/spring-oauth2-hasrole-access-denied
 
 <br/>
 流程图:<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/0.png)<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/1.png)<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/2.png)<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/3.png)<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/4.png)<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/5.png)<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/6.png)<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/7.png)<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/8.png)<br/>
-![image](https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/9.png)<br/>
-
+![image](
+https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/0.png
+)<br/>
+![image](
+https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/1.png
+)<br/>
+![image](
+https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/2.png
+)<br/>
+![image](
+https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/3.png
+)<br/>
+![image](
+https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/4.png
+)<br/>
+![image](
+https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/5.png
+)<br/>
+![image](
+https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/6.png
+)<br/>
+![image](
+https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/7.png
+)<br/>
+![image](
+https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/8.png
+)<br/>
+![image](
+https://github.com/zhikaichen123/spring_cloud_oauth2/raw/master/demo/admin.png
+)<br/>
 
 <br/><br/>
 win7 配置curl 
